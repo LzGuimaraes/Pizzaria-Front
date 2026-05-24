@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:3000', // URL do seu backend
+  baseURL: 'https://pizzaria-hymw.onrender.com', // URL do seu backend
 });
 
 // Antes de cada requisição, injeta o token se existir
