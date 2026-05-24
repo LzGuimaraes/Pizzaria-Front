@@ -1,0 +1,227 @@
+/* Container principal */
+.pedidos-container {
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: 32px 16px;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.pedidos-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cabeçalho */
+.pedidos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.saudacao {
+  display: block;
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.pedidos-titulo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #111827;
+  margin: 0;
+}
+
+/* Botões e Ações no Cabeçalho */
+.header-acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-novo-pedido {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-novo-pedido:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-logout {
+  background-color: transparent;
+  color: #4b5563;
+  border: 1px solid #d1d5db;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #f3f4f6;
+  color: #1f2937;
+  border-color: #9ca3af;
+}
+
+.link-destaque {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 16px;
+  display: inline-block;
+}
+
+.link-destaque:hover {
+  text-decoration: underline;
+}
+
+/* Estados da Tela (Loading e Vazio) */
+.mensagem-estado {
+  background-color: #ffffff;
+  padding: 48px;
+  border-radius: 12px;
+  text-align: center;
+  color: #6b7280;
+  border: 1px solid #f3f4f6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.empty-state h3 {
+  color: #111827;
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Lista e Cards */
+.pedidos-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pedido-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.pedido-card:hover {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.pedido-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px 0;
+}
+
+.pedido-preco {
+  color: #4b5563;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Ações e Badges */
+.pedido-acoes {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-cancelar {
+  background: transparent;
+  color: #dc2626;
+  border: none;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn-cancelar:hover {
+  background-color: #fef2f2;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.badge-pendente {
+  background-color: #fef9c3;
+  color: #854d0e;
+  border: 1px solid #fef08a;
+}
+
+.badge-cancelado {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.badge-concluido {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.badge-padrao {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .pedidos-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .header-acoes {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .btn-novo-pedido, .btn-logout {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .pedido-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  
+  .pedido-acoes {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
